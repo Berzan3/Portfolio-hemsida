@@ -1,0 +1,105 @@
+*{
+  color:white;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 0;
+}
+
+/*Header css start*/
+
+header h1 {
+  padding: '10px';
+  text-align: center;
+  font-style: italic;
+}
+
+/*Header css end*/
+
+body{
+  font-family:'nixie_oneregular', 'Courier New', Courier, monospace;
+  line-height: 1.4;
+  background-color: rgb(0, 0, 0);
+}
+
+a{
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+/*menuItem css start*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.MenuLink{
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+  display: inline-block;
+  text-decoration: none;
+  padding: 3px 8px;
+  transition: all ease-in-out;
+}
+
+.MenuLink:hover {
+  color: grey;
+  transition: all ease-in-out;
+  cursor: pointer;
+}
+
+/* nav ul {
+  list-style: none;
+  background-color: rgb(17, 17, 17);
+  border-radius: 1rem;
+} */
+
+nav ul li {
+  display: inline-block;
+  margin-right: 80px;
+  margin-left: 80px;
+}
+
+/*menuItem css end*/
+
+.Home .Potrait {
+  background-image: url("C:/Users/Berzan/Pictures/Saved Pictures/smol-menibba.png");
+  width: 150px;
+  height: 200px;
+  border-radius: 1.25rem;
+}
+
+.Home {
+ display: flex;
+ align-items: center;
+ flex-wrap: wrap;
+ justify-content: center;
+ margin-top: 100px;
+}
+
+.Home p {
+  max-width: 50%;
+  text-size-adjust: 100%;
+}
+
+.Projects {
+  display: grid;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 50px;
+  text-align: center;
+  font-size: 9pt;
+}
+
+/* .CV-Image {
+  width: 50%;
+  height: 800px;
+  background-image: url("C:/Users/Berzan/Pictures/Saved Pictures/cv-storleks-referens.png");
+  background-size: cover;
+  margin-bottom: 50px;
+} */
