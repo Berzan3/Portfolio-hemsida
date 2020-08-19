@@ -63,11 +63,9 @@ nav ul li {
 
 /*menuItem css end*/
 
-.Home .Potrait {
-  background-image: url("C:/Users/Berzan/Pictures/Saved Pictures/smol-menibba.png");
-  width: 150px;
-  height: 200px;
+.Home img {
   border-radius: 1.25rem;
+  margin-right: 1%;
 }
 
 .Home {
@@ -81,6 +79,7 @@ nav ul li {
 .Home p {
   max-width: 50%;
   text-size-adjust: 100%;
+  margin-left: 0%;
 }
 
 .Projects {
@@ -95,11 +94,3 @@ footer{
   text-align: center;
   font-size: 9pt;
 }
-
-/* .CV-Image {
-  width: 50%;
-  height: 800px;
-  background-image: url("C:/Users/Berzan/Pictures/Saved Pictures/cv-storleks-referens.png");
-  background-size: cover;
-  margin-bottom: 50px;
-} */
