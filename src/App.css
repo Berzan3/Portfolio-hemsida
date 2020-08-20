@@ -2,7 +2,7 @@
   color:white;
   box-sizing: border-box;
   margin: auto;
-  padding: 0;
+  /* padding: 0; */
 }
 
 /*Header css start*/
@@ -40,7 +40,6 @@ nav {
   display: inline-block;
   text-decoration: none;
   padding: 3px 8px;
-  transition: all ease-in-out;
 }
 
 .MenuLink:hover {
@@ -82,12 +81,35 @@ nav ul li {
   margin-left: 0%;
 }
 
-.Projects {
+.Container {
   display: grid;
+  grid-template-columns: 40% 40%;
+  column-gap: 25px;
+  justify-content: center;
+  height: 90vh;
+}
+
+.Project {
+  transition: all 0.3s ease-in-out;
+}
+
+.Project img {
+  max-width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.Project:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.Project h3 {
+text-align: center;
 }
 
 footer{
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   width: 100%;
   padding-top: 50px;
