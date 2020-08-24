@@ -85,8 +85,10 @@ nav ul li {
   display: grid;
   grid-template-columns: 40% 40%;
   column-gap: 25px;
+  row-gap: 10px;
   justify-content: center;
   height: 90vh;
+  margin-top: 50px;
 }
 
 .Project {
@@ -115,4 +117,5 @@ footer{
   padding-top: 50px;
   text-align: center;
   font-size: 9pt;
+  margin-top: 400px;
 }
