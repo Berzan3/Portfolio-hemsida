@@ -5,6 +5,7 @@ import MenuItem from './components/MenuItem';
 import Home from './components/Home';
 import Cv from './components/Cv';
 import Projects from './components/Projects';
+import Signalparadox from './components/Projects/Signalparadox';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route exact path = "/" component={Home} />
       <Route path = "/Cv" component={Cv} />
       <Route path = "/Projects" component={Projects} />
+      <Route path = "/Signalparadox" component={Signalparadox} />
 
       <footer>©2020 Andreas Berzelius. All Rights Reserved.</footer>
     </div>

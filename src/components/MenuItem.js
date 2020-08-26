@@ -2,12 +2,7 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 
 
-function MenuItem() {
-
-    // const Titles = {
-
-    // }
-
+function MenuItem() {  
   return (
     <nav>
         <ul> 
