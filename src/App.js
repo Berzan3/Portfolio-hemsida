@@ -1,6 +1,7 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css'; //fuckar min egna css
 import './App.css';
-import {BrowserRouter, Route} from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import MenuItem from './components/MenuItem';
 import Home from './components/Home';
 import Cv from './components/Cv';
@@ -10,18 +11,18 @@ import Signalparadox from './components/Projects/Signalparadox';
 function App() {
   return (
     <BrowserRouter>
-    <div className="App">
-      <header>
-      <h1>Andreas Berzelius</h1>
-      </header>
-      <MenuItem/>
-      <Route exact path = "/" component={Home} />
-      <Route path = "/Cv" component={Cv} />
-      <Route path = "/Projects" component={Projects} />
-      <Route path = "/Signalparadox" component={Signalparadox} />
+      <div className="App">
+        <header>
+          <h1>Andreas Berzelius</h1>
+        </header>
+        <MenuItem />
+        <Route exact path="/" component={Home} />
+        <Route path="/Cv" component={Cv} />
+        <Route path="/Projects" component={Projects} />
+        <Route path="/Signalparadox" component={Signalparadox} />
 
-      <footer>©2020 Andreas Berzelius. All Rights Reserved.</footer>
-    </div>
+        <footer>©2020 Andreas Berzelius. All Rights Reserved.</footer>
+      </div>
     </BrowserRouter>
   );
 }
