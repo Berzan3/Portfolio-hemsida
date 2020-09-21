@@ -1,12 +1,30 @@
 import React from 'react';
 import { Accordion, Card } from 'react-bootstrap';
 import { CopyBlock, dracula } from "react-code-blocks";
+// import ReactPlayer from "react-player";
+
+const codeBlockStyle = {
+  height: '500px',
+  overflowY: 'scroll',
+  borderRadius: '5px',
+  boxShadow: '1px 2px 3px rgba(0,0,0,0.35)',
+  fontSize: '1rem',
+  margin: '0px 0.75rem',
+}
 
 function Signalparadox() {
   return (
     <div className="Project">
       <title>Signalparadox</title>
-      <img src="../img/Signalparadox-stats" alt="*video av spelet*" />
+
+      {/* <ReactPlayer
+          className='react-player'
+          url={'../vid/animeradScen_AndreasBerzelius.mp4'}
+          fluid="md"
+          controls='true'
+          light='true'
+        /> */}
+
       <h1>What is this?</h1>
       <body>In SignalParadox you play as Livia Skye who wakes up on an alien infested spaceship trying to figure out what's going on and how to get out.
       You sneak past aliens and solve puzzles in order to make it out alive.
@@ -20,10 +38,10 @@ function Signalparadox() {
       In the end my roles in the project was input programmer,
       Gameplay designer and Ai programmer.
       <h1>My tasks</h1>
-        <h3>Decoygrenade</h3>
       </body>
       <img src="../img/grenadethrow.gif" alt="grenadethrow-gif" />
       <body>
+        <h2>Decoygrenade</h2>
         The player can pick up and throw a decoygrenade to lure a certain alien to it so that they can more safely walk by under a limited time.
         The trajectory of the grenade is visualized while aiming so the player could aim more easily.
         If the player aims out of range the visualization and animation stops.
@@ -54,7 +72,8 @@ function Signalparadox() {
               Destroy(thrownGrenade.gameObject);
               StopCoroutine(despawnGrenadeCoroutine);
           }
-          thrownGrenade = Instantiate(grenadePrefabRigidbody, grenadeProp.position, grenadeProp.rotation);
+          thrownGrenade = Instantiate(grenadePrefabRigidbody, 
+            grenadeProp.position, grenadeProp.rotation);
           thrownGrenade.AddForce(Vector3.up * gravity);
           thrownGrenade.velocity = CalculateLaunchData().initialVelocity;
           hasGrenade = false;
@@ -67,8 +86,10 @@ function Signalparadox() {
           if (GetTarget().collider && (newTarget.y - grenadeProp.position.y) < currentThrowHeight)
           {
               float displacementY = newTarget.y - grenadeProp.position.y;
-              Vector3 displacementXZ = new Vector3(newTarget.x - grenadeProp.position.x, 0, newTarget.z - grenadeProp.position.z);
-              float time = Mathf.Sqrt(-2 * currentThrowHeight / gravity) + Mathf.Sqrt(2 * (displacementY - currentThrowHeight) / gravity);
+              Vector3 displacementXZ = new Vector3(newTarget.x - grenadeProp.position.x, 0, 
+                newTarget.z - grenadeProp.position.z);
+              float time = Mathf.Sqrt(-2 * currentThrowHeight / gravity) + 
+              Mathf.Sqrt(2 * (displacementY - currentThrowHeight) / gravity);
               Vector3 velocityY = Vector3.up * Mathf.Sqrt(-2 * gravity * currentThrowHeight);
               Vector3 velocityXZ = displacementXZ / time;
               return new LaunchData(velocityXZ + velocityY * -Mathf.Sign(gravity), time);
@@ -92,7 +113,8 @@ function Signalparadox() {
               for (int i = 0; i <= lineRendererResolution; i++)
               {
                   float simulationTime = i / (float)lineRendererResolution * launchData.timeToTarget;
-                  Vector3 displacement = launchData.initialVelocity * simulationTime + Vector3.up * gravity * simulationTime * simulationTime / 2f;
+                  Vector3 displacement = launchData.initialVelocity * simulationTime + 
+                  Vector3.up * gravity * simulationTime * simulationTime / 2f;
                   Vector3 drawPoint = grenadeProp.position + displacement;
                   previousDrawPoint = drawPoint;
                   AddLinePoint(previousDrawPoint);
@@ -109,14 +131,7 @@ function Signalparadox() {
                   codeBlock
                   language="c"
                   theme={dracula}
-                  customStyle={{
-                    height: '250px',
-                    overflowY: 'scroll',
-                    borderRadius: '5px',
-                    boxShadow: '1px 2px 3px rgba(0,0,0,0.35)',
-                    fontSize: '0.75rem',
-                    margin: '0px 0.75rem',
-                  }}
+                  customStyle={codeBlockStyle}
                 // highlight="1-5,7,10,15-20"
                 />
               </div>
@@ -135,7 +150,7 @@ function Signalparadox() {
 
       <img src="../img/chargerCharging.gif" alt="chargerCharging-gif" />
       <body>
-        <h3>The chargerEnemy</h3>
+        <h2>The chargerEnemy</h2>
         The ChargerEnemy is an enemy that charges at the player at a very fast speed and if the player is caught in the charge the player dies when the charger smashes into something.
       </body>
       <br />
@@ -220,26 +235,21 @@ function Signalparadox() {
                   codeBlock
                   language="c"
                   theme={dracula}
-                  customStyle={{
-                    height: '250px',
-                    overflowY: 'scroll',
-                    borderRadius: '5px',
-                    boxShadow: '1px 2px 3px rgba(0,0,0,0.35)',
-                    fontSize: '0.75rem',
-                    margin: '0px 0.75rem',
-                  }}
+                  customStyle={codeBlockStyle}
                 />
               </div>
             </Card.Body>
           </Accordion.Collapse>
         </Card>
       </Accordion>
+
       <body>
         The charger is part of a puzzle the player must solve by dodging and luring the charger to charge into a glass wall.
         If the charger reaches a certain minimum speed and charges into the glasswall it destroys the wall creating a path and then dies.
        </body>
 
       <img src="../img/chargerDestroyGlass.gif" alt="chargerDestroyGlass-gif" />
+
       <Accordion className="accordion" defaultActiveKey="1" >
         <Card>
           <Accordion.Toggle as={Card.Header} eventKey="0">
@@ -305,14 +315,7 @@ function Signalparadox() {
                   codeBlock
                   language="c"
                   theme={dracula}
-                  customStyle={{
-                    height: '250px',
-                    overflowY: 'scroll',
-                    borderRadius: '5px',
-                    boxShadow: '1px 2px 3px rgba(0,0,0,0.35)',
-                    fontSize: '0.75rem',
-                    margin: '0px 0.75rem',
-                  }}
+                  customStyle={codeBlockStyle}
                 />
               </div>
             </Card.Body>
@@ -321,7 +324,7 @@ function Signalparadox() {
       </Accordion>
 
       <body>
-        <h3>Miscellaneous</h3>
+        <h2>Miscellaneous</h2>
         To make the grenade pickup more realistic and look better i wanted the grenade in the players hand to appear when the animation of the pickup reached out and grabbed.
         So my first thought was to make a timer in the script to decide when to enable the grenade but then i realised i could make it much easier with an animation event.
       </body>
@@ -341,12 +344,12 @@ function Signalparadox() {
        This was my biggest game project i've helped make at university so far.
        I was really exhausted in the beginning of the project because of a previously very intense programming course and that in the beginning of this course we had to make a 2d and 3d controller.
        The objective with the project was to make a 3D game.
-       <h3>Challenges</h3>
+       <h1>Challenges</h1>
        This was a big challenge, i had never made a project of this size before with so many people. My Unity and C# knowledge was also a bit novice.
         Another challenge was that our group wanted the grenade trajectory to be visualized like a parabola of some sort.
         I was in charge of the grenade and i had never made something so complex with a linerenderer before.
         I looked up articles and videos on the internet to understand the math for calculating the curve. After i got down the math, the rest went easier.
-        <h3>Iteration</h3>
+        <h1>Iteration</h1>
         The ChargerEnemy had to have it´s Charge Mechanism reworked several times throughout the project until it was bug free and felt good.
         As my first big Game project, with only a limited amount of Unity and programming knowledge,
         i definitely struggled with my tasks. But this is what my colleagues expected me to make,

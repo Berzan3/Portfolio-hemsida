@@ -126,8 +126,13 @@ nav ul li {
   margin-top: 20px;
 }
 
+.Project h1, h2, h3, h4, h5, h6 {
+  border-bottom: 2px solid currentColor;
+}
+
 .Project body {
   font-size: 18px;
+  max-width: 60%;
 }
 
 .Project img {
@@ -144,10 +149,6 @@ nav ul li {
   background-color: rgb(66, 66, 66);
   color: white;
   cursor: pointer;
-}
-
-.Project body {
-  max-width: 60%;
 }
 
 footer{
