@@ -11,11 +11,6 @@
   padding: 0;
 }
 
-:root {
-  --mainColor: black;
-  --secondaryColor: white;
-}
-
 /*Header css start*/
 
 header h1 {
@@ -78,7 +73,7 @@ nav ul li {
   margin-top: 50px;
 }
 
-/*Projects css start--->*/
+/*Projects.jsx css start--->*/
 .ProjectsContainer {
   display: grid;
   grid-template-columns: 40% 40%;
@@ -106,18 +101,19 @@ nav ul li {
   transition: all 0.3s ease-in-out;
 }
 
-.ProjectPreview h3, p {
+.ProjectPreview h3,.ProjectPreview p {
   color: white;
 }
 
-/*<--Projects css end*/
+/*<--Projects.jsx css end*/
+
 
 .Project {
   display: grid;
   justify-content: center;
 }
 
-.Project h1, h2, h3, h4, h5, h6, body {
+.Project h1,.Project h2,.Project h3,.Project h4,.Project h5,.Project h6,.Project body {
   background-color: black;
   color: white;
   margin: auto;
@@ -126,7 +122,7 @@ nav ul li {
   margin-top: 20px;
 }
 
-.Project h1, h2, h3, h4, h5, h6 {
+.Project h1,.Project h2,.Project h3 {
   border-bottom: 2px solid currentColor;
 }
 
@@ -139,6 +135,12 @@ nav ul li {
   max-width: 100%;
   height: 350px;
   object-fit: cover;
+}
+
+.Project #bigImage {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 50% !important;
 }
 
 .card{

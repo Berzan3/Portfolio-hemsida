@@ -21,14 +21,14 @@ function Projects() {
         </div>
       </NavLink>
 
-      <NavLink to="./Onlineshooter">
+      {/* <NavLink to="./Onlineshooter">
         <div className="ProjectPreview"><img src="../img/Gamejam_shooter3.gif" alt="GameJam-gif" />
           <h3>Online shooter</h3>
           <p>An online shooter that was made on a short two day gameJam. Also my first online game</p>
         </div>
-      </NavLink>
+      </NavLink> */}
 
-      <NavLink to="./EnvriomentUnreal">
+      <NavLink to="./EnviromentUnreal">
         <div className="ProjectPreview"><img src="../img/enviroment-UnrealEngine.png" alt="Enviroment-img" />
           <h3 >An enviroment inside Unreal Engine</h3>
           <p>Made models in maya and then built them together in unreal engine</p>

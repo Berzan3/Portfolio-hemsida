@@ -1,7 +1,7 @@
 import React from 'react';
 import { Accordion, Card } from 'react-bootstrap';
 import { CopyBlock, dracula } from "react-code-blocks";
-// import ReactPlayer from "react-player";
+import ReactPlayer from "react-player";
 
 const codeBlockStyle = {
   height: '500px',
@@ -17,20 +17,20 @@ function Signalparadox() {
     <div className="Project">
       <title>Signalparadox</title>
 
-      {/* <ReactPlayer
-          className='react-player'
-          url={'../vid/animeradScen_AndreasBerzelius.mp4'}
-          fluid="md"
-          controls='true'
-          light='true'
-        /> */}
+      <ReactPlayer
+        className='react-player'
+        url={'../vid/Signalparadox_demo.mp4'}
+        fluid="md"
+        controls='true'
+        light='true'
+      />
 
       <h1>What is this?</h1>
       <body>In SignalParadox you play as Livia Skye who wakes up on an alien infested spaceship trying to figure out what's going on and how to get out.
       You sneak past aliens and solve puzzles in order to make it out alive.
       The game concept is basically to stealth and solve puzzles through an exciting and scary environment.
     </body>
-      <img src="../img/Signalparadox-stats.png" alt="SignalParadox-stats" />
+      <img src="../img/Signalparadox/Signalparadox-stats.png" alt="SignalParadox-stats" />
 
       <body>
         <h1>My Role</h1>
@@ -39,7 +39,7 @@ function Signalparadox() {
       Gameplay designer and Ai programmer.
       <h1>My tasks</h1>
       </body>
-      <img src="../img/grenadethrow.gif" alt="grenadethrow-gif" />
+      <img src="../img/Signalparadox/grenadethrow.gif" alt="grenadethrow-gif" />
       <body>
         <h2>Decoygrenade</h2>
         The player can pick up and throw a decoygrenade to lure a certain alien to it so that they can more safely walk by under a limited time.
@@ -50,7 +50,7 @@ function Signalparadox() {
       <body>
         To make the visualization of the grenades trajectory look better than just a colored thin line i made a simple texture that makes the linerenderer look dotted.
         <br />
-        <img src="../img/dottedlineTexture.png" alt="dottedline-texture" />
+        <img src="../img/Signalparadox/dottedlineTexture.png" alt="dottedline-texture" />
       </body>
 
       <Accordion className="accordion" defaultActiveKey="1" >
@@ -143,12 +143,12 @@ function Signalparadox() {
       <body>
         After a certain time or if the player picks up another grenade the currently thrown grenade gets erased.
       </body>
-      <img src="../img/grenadethrow2.gif" alt="grenadethrow2-gif" />
+      <img src="../img/Signalparadox/grenadethrow2.gif" alt="grenadethrow2-gif" />
       <body>
         The script for getting the aliens to chase the grenade was made by my co-programmer
       </body>
 
-      <img src="../img/chargerCharging.gif" alt="chargerCharging-gif" />
+      <img src="../img/Signalparadox/chargerCharging.gif" alt="chargerCharging-gif" />
       <body>
         <h2>The chargerEnemy</h2>
         The ChargerEnemy is an enemy that charges at the player at a very fast speed and if the player is caught in the charge the player dies when the charger smashes into something.
@@ -157,11 +157,18 @@ function Signalparadox() {
       <body>
         The charger has several states it switches between and uses a navmesh agent to move around.
         The Charger´s states are: Patrolstate, huntstate, chargeupstate, chargestate, stunstate, deadstate.
+        Patrolstate the charger patrols between his waypoints until he sees the player.
+        Hunstate the charger sees the player and is actively chasing the player to go into chargeupstate.
+        Chargeupstate the charger stops briefly charge against the player.
+        ChargeState the charger charges at the player.
+        Stunstate happens after the charger has charged into something where he is stunned for a brief moment.
+        Deadstate the charger is dead and can only happen if the charger charges into a glasswall or a laser.
+        <img src="../img/Signalparadox/chargerInspectWin.png" alt="chargerInspectWin-png" />
       </body>
       <br />
       <body>
         At first i tried to use a boxcollider with ontriggerEnter to know when it has stopped charging
-        but after some time working on the project my co-programmer suggested i could just measure the speed after it has started charging.
+        but after some time working on the project my co-programmer suggested i could just measure the speed after it has started charging and measure to see if it decreases.
       </body>
 
       <Accordion className="accordion" defaultActiveKey="1" >
@@ -248,7 +255,7 @@ function Signalparadox() {
         If the charger reaches a certain minimum speed and charges into the glasswall it destroys the wall creating a path and then dies.
        </body>
 
-      <img src="../img/chargerDestroyGlass.gif" alt="chargerDestroyGlass-gif" />
+      <img src="../img/Signalparadox/chargerDestroyGlass.gif" alt="chargerDestroyGlass-gif" />
 
       <Accordion className="accordion" defaultActiveKey="1" >
         <Card>
@@ -328,16 +335,16 @@ function Signalparadox() {
         To make the grenade pickup more realistic and look better i wanted the grenade in the players hand to appear when the animation of the pickup reached out and grabbed.
         So my first thought was to make a timer in the script to decide when to enable the grenade but then i realised i could make it much easier with an animation event.
       </body>
-      <img src="../img/grenadePickupAnimation.gif" alt="grenadepickupAnimation-gif" />
+      <img src="../img/Signalparadox/grenadePickupAnimation.gif" alt="grenadepickupAnimation-gif" />
       <body>
         To make the transition between levels feel more smooth i made a simple fade in with an elevator sound which triggers at the end of a level,
         when the elevator sound has finished the player is taken to the next level.
       </body>
-      <img src="../img/fadeinLevelTransition.gif" alt="fadeinleveltransition-gif" />
+      <img src="../img/Signalparadox/fadeinLevelTransition.gif" alt="fadeinleveltransition-gif" />
       <body>
         My programming colleague advised me to make a simple Hinge joint motor instead of an animation to make this cool machine one of my designers made spin.
       </body>
-      <img src="../img/motorSpin.gif" alt="motorSpin-gif" />
+      <img src="../img/Signalparadox/motorSpin.gif" alt="motorSpin-gif" />
 
       <body>
         <h1>The process</h1>

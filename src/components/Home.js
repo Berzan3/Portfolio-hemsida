@@ -4,11 +4,10 @@ function Home() {
   return (
     <div className="Home">
       <title>Andreas Berzelius</title>
-      <img src="../img/smol-menibba.png" alt="andreas"></img>
-      <p>Hi my name is Andreas! I am a self-motivated passionate Computer Programmer,
-      continuous learner. My coding manifesto is to write code readable and organised,
-      reduce code redundency and increase efficiency,
-        test and investigate every scenario possible.</p>
+      <img src="../img/AndreasBerzelius.png" alt="andreas"></img>
+      <p>Hi my name is Andreas! Im a Computer &#38; Systems Science with specialization to Computer game development student at Stockholm University.
+        Im a eager programmer that loves to learn and work with other people on projects.
+      </p>
     </div>
   );
 }
