@@ -17,15 +17,14 @@ function Pixelsurgeon() {
         <div className="Project">
             <title>EnviromentUnreal</title>
 
-            <ReactPlayer
+                <ReactPlayer
                 className='react-player'
                 url={'../vid/Pixelsurgeon_DemoVideo.mp4'}
                 fluid="md"
-                controls='true'
-                light='true'
-            />
+                controls={true}
+                light='true'/>
 
-            <body>
+                <div>
                 <h1>What is this?</h1>
                 Pixel surgeon is a learning game about the body's anatomy sitting in a 2d operating room.
                 Inspired by games like Surgeon Simulator and the board game Operation.
@@ -40,11 +39,9 @@ function Pixelsurgeon() {
                 he also gets a rating. The grading system goes from F to A and depends on how much blood the patient has lost and how correct the placement of the healthy body part is.
                 In addition to teaching about the body's anatomy,
                 we list a couple of fun facts about each of the body parts that you can read if you press "Organ info" up to the left and click or have clicked on a body part.
-                </body>
 
-            <img src="../img/Pixelsurgeon/pixelsurgeon-stats.png" alt="pixelsurgeon-stats-img" />
-
-            <body>
+                <br/>
+                <img src="../img/Pixelsurgeon/pixelsurgeon-stats.png" alt="pixelsurgeon-stats-img" />
 
                 <h1>My tasks</h1>
                 My role I worked on was mainly to create the controls for the game and handle input but I also made a script to handle when the patient should start or
@@ -261,15 +258,15 @@ function Pixelsurgeon() {
                 stop the bleeding at the different blood positions.
 
                 <Accordion className="accordion" defaultActiveKey="1" >
-        <Card>
-          <Accordion.Toggle as={Card.Header} eventKey="0">
-            BleedSpotManager.cs
+                    <Card>
+                        <Accordion.Toggle as={Card.Header} eventKey="0">
+                            BleedSpotManager.cs
     </Accordion.Toggle>
-          <Accordion.Collapse eventKey="0">
-            <Card.Body>
-              <div className="codeblock">
-                <CopyBlock
-                  text={`
+                        <Accordion.Collapse eventKey="0">
+                            <Card.Body>
+                                <div className="codeblock">
+                                    <CopyBlock
+                                        text={`
                   public class BleedSpotManager : MonoBehaviour
                   {
                       Dictionary<string, ParticleSystem> _bleedSpots;
@@ -335,39 +332,38 @@ function Pixelsurgeon() {
                       }
                   
                   }`}
-                  showLineNumbers
-                  codeBlock
-                  language="c"
-                  theme={dracula}
-                  customStyle={codeBlockStyle}
-                />
-              </div>
-            </Card.Body>
-          </Accordion.Collapse>
-        </Card>
-      </Accordion>
+                                        showLineNumbers
+                                        codeBlock
+                                        language="c"
+                                        theme={dracula}
+                                        customStyle={codeBlockStyle}
+                                    />
+                                </div>
+                            </Card.Body>
+                        </Accordion.Collapse>
+                    </Card>
+                </Accordion>
 
                 <h4>Miscellaneous</h4>
                 I made an animation that visualizes that the grade slides and fades into the screen.
                 Then I also made a slightly comical almost fart-like sound that is played in connection with the animation.
 
-            <h1>The process</h1>
-            This was a small but fun 2d project to make! The goal of the project was to make a learning game.
+                <h1>The process</h1>
+                This was a small but fun 2d project to make! The goal of the project was to make a learning game.
 
-            <h1>Challenges</h1>
-            The biggest challenge for me was to make the Controls work as intended.
+                <h1>Challenges</h1>
+                 The biggest challenge for me was to make the Controls work as intended.
 
-            <h1>Iteration</h1>
-            We were sure that we wanted to teach about the anatomy of the body from the beginning,
-            but if we were to teach basic information about the different parts of the body,
-            we changed it to short fun facts, as we judged that it would be very boring to just sit and read paragraphs of facts.
-            Other things we changed about were the number of tools and whether the player could do brain transplants.
-            We considered brain transplants to be too unrealistic as we still try to relate to some form of semi-realism in the game.
-            The second was that we were content with only three tools because if we had added more, we think it would have been too cumbersome to keep track of.
-            Certain things got reworked under the project but i am pleased about how it turned out and the work me and my colleagues put into the project.
-            In the end i learned more about working on 2D projects in Unity.
-            </body>
-
+                <h1>Iteration</h1>
+                We were sure that we wanted to teach about the anatomy of the body from the beginning,
+                but if we were to teach basic information about the different parts of the body,
+                we changed it to short fun facts, as we judged that it would be very boring to just sit and read paragraphs of facts.
+                Other things we changed about were the number of tools and whether the player could do brain transplants.
+                We considered brain transplants to be too unrealistic as we still try to relate to some form of semi-realism in the game.
+                The second was that we were content with only three tools because if we had added more, we think it would have been too cumbersome to keep track of.
+                Certain things got reworked under the project but i am pleased about how it turned out and the work me and my colleagues put into the project.
+                In the end i learned more about working on 2D projects in Unity.
+                </div>    
         </div>
     );
 }
