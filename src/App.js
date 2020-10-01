@@ -9,6 +9,7 @@ import Projects from './components/Projects';
 import Signalparadox from './components/Projects/Signalparadox';
 import EnviromentUnreal from './components/Projects/EnviromentUnreal';
 import Spaceinvader from './components/Projects/Spaceinvader';
+import Pixelsurgeon from './components/Projects/Pixelsurgeon';
 
 function App() {
   return (
@@ -24,9 +25,11 @@ function App() {
         <Route path="/Signalparadox" component={Signalparadox} />
         <Route path="/EnviromentUnreal" component={EnviromentUnreal} />
         <Route path="/Spaceinvader" component={Spaceinvader} />
+        <Route path="/Pixelsurgeon" component={Pixelsurgeon} />
 
-
-        <footer>©2020 Andreas Berzelius. All Rights Reserved.</footer>
+        <footer>©2020 Andreas Berzelius. All Rights Reserved.
+          Email: Andreas.Berzelius@outlook.com
+        </footer>
       </div>
     </BrowserRouter>
   );

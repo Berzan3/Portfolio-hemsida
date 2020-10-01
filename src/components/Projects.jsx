@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 function Projects() {
   return (
 
-    <div className="ProjectsContainer">
+    <div className="ProjectsPreviewContainer">
 
       <title>PROJECTS</title>
       <NavLink to="./Signalparadox">
@@ -27,6 +27,13 @@ function Projects() {
           <p>An online shooter that was made on a short two day gameJam. Also my first online game</p>
         </div>
       </NavLink> */}
+
+      <NavLink to="./Pixelsurgeon">
+        <div className="ProjectPreview"><img src="../img/pixelsurgeon-demo.gif" alt="pixelsurgeon-gif" />
+          <h3 >Pixelsurgeon</h3>
+          <p>A 2D surgeon game</p>
+        </div>
+      </NavLink>
 
       <NavLink to="./EnviromentUnreal">
         <div className="ProjectPreview"><img src="../img/enviroment-UnrealEngine.png" alt="Enviroment-img" />

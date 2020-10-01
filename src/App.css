@@ -74,11 +74,11 @@ nav ul li {
 }
 
 /*Projects.jsx css start--->*/
-.ProjectsContainer {
+.ProjectsPreviewContainer {
   display: grid;
-  grid-template-columns: 40% 40%;
+  grid-template-columns: 35% 35%;
   row-gap: 15px;
-  column-gap: 50px;
+  column-gap: 20px;
   justify-content: center;
   margin-top: 50px;
   max-width: 65%;
@@ -126,7 +126,7 @@ nav ul li {
   border-bottom: 2px solid currentColor;
 }
 
-.Project body {
+.Project body, .Project p {
   font-size: 18px;
   max-width: 60%;
 }
