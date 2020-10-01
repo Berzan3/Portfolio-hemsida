@@ -4,7 +4,7 @@ function Cv() {
   return (
     <div className="CV">
       <title>CV</title>
-      <img src="../img/cv-storleks-referens.png" alt="cv-bild" />
+      <a href="../img/Resumé.pdf"><img src="../img/Resumé-picture.png" alt="cv-bild" /></a>
     </div>
   );
 }

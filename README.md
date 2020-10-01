@@ -1,2 +1,2 @@
 # Portfolio-hemsida
- hemsida gjord med react i visualcode
+ portfolio-hemsida gjord med react i visualcode
