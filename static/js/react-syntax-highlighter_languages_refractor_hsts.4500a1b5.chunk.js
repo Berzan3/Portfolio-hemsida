@@ -1,2 +1,0 @@
-(this.webpackJsonpvsprojects=this.webpackJsonpvsprojects||[]).push([[55],{184:function(s,a,e){"use strict";function t(s){s.languages.hsts={directive:{pattern:/\b(?:max-age=|includeSubDomains|preload)/,alias:"keyword"},safe:{pattern:/\d{8,}/,alias:"selector"},unsafe:{pattern:/\d{1,7}/,alias:"function"}}}s.exports=t,t.displayName="hsts",t.aliases=[]}}]);
-//# sourceMappingURL=react-syntax-highlighter_languages_refractor_hsts.4500a1b5.chunk.js.map
