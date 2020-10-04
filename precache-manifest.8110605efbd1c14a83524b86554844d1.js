@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5bc8fbdb0d155e05a944e83f38ba15ef",
+    "revision": "4bc2c25f13dfea4a2e263b6983876100",
     "url": "/Portfolio-hemsida/index.html"
   },
   {
-    "revision": "e0898d1ae18167517dcf",
+    "revision": "afe1c6df6d032b13bc29",
     "url": "/Portfolio-hemsida/static/css/153.11829350.chunk.css"
   },
   {
-    "revision": "98c0c92a96d889ba5997",
+    "revision": "03d83030513084d1be35",
     "url": "/Portfolio-hemsida/static/css/main.746c043a.chunk.css"
   },
   {
-    "revision": "e0898d1ae18167517dcf",
-    "url": "/Portfolio-hemsida/static/js/153.62e3dda5.chunk.js"
+    "revision": "afe1c6df6d032b13bc29",
+    "url": "/Portfolio-hemsida/static/js/153.62a06f89.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/Portfolio-hemsida/static/js/153.62e3dda5.chunk.js.LICENSE.txt"
+    "url": "/Portfolio-hemsida/static/js/153.62a06f89.chunk.js.LICENSE.txt"
   },
   {
     "revision": "abfb11ad3104713c2442",
     "url": "/Portfolio-hemsida/static/js/154.192fc0ca.chunk.js"
   },
   {
-    "revision": "98c0c92a96d889ba5997",
-    "url": "/Portfolio-hemsida/static/js/main.084db035.chunk.js"
+    "revision": "03d83030513084d1be35",
+    "url": "/Portfolio-hemsida/static/js/main.dc422011.chunk.js"
   },
   {
     "revision": "d6b979bac023fb366d76",

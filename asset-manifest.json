@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Portfolio-hemsida/static/css/main.746c043a.chunk.css",
-    "main.js": "/Portfolio-hemsida/static/js/main.084db035.chunk.js",
-    "main.js.map": "/Portfolio-hemsida/static/js/main.084db035.chunk.js.map",
+    "main.js": "/Portfolio-hemsida/static/js/main.dc422011.chunk.js",
+    "main.js.map": "/Portfolio-hemsida/static/js/main.dc422011.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.js": "/Portfolio-hemsida/static/js/react-syntax-highlighter_languages_refractor_abap.a5e4cebf.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js.map": "/Portfolio-hemsida/static/js/react-syntax-highlighter_languages_refractor_abap.a5e4cebf.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_actionscript.js": "/Portfolio-hemsida/static/js/react-syntax-highlighter_languages_refractor_actionscript.5da8b6a0.chunk.js",
@@ -308,22 +308,22 @@
     "runtime-main.js": "/Portfolio-hemsida/static/js/runtime-main.770ccd66.js",
     "runtime-main.js.map": "/Portfolio-hemsida/static/js/runtime-main.770ccd66.js.map",
     "static/css/153.11829350.chunk.css": "/Portfolio-hemsida/static/css/153.11829350.chunk.css",
-    "static/js/153.62e3dda5.chunk.js": "/Portfolio-hemsida/static/js/153.62e3dda5.chunk.js",
-    "static/js/153.62e3dda5.chunk.js.map": "/Portfolio-hemsida/static/js/153.62e3dda5.chunk.js.map",
+    "static/js/153.62a06f89.chunk.js": "/Portfolio-hemsida/static/js/153.62a06f89.chunk.js",
+    "static/js/153.62a06f89.chunk.js.map": "/Portfolio-hemsida/static/js/153.62a06f89.chunk.js.map",
     "static/js/154.192fc0ca.chunk.js": "/Portfolio-hemsida/static/js/154.192fc0ca.chunk.js",
     "static/js/154.192fc0ca.chunk.js.map": "/Portfolio-hemsida/static/js/154.192fc0ca.chunk.js.map",
     "index.html": "/Portfolio-hemsida/index.html",
-    "precache-manifest.4ba1baafcf3ffaf8845bfbff3f3638ff.js": "/Portfolio-hemsida/precache-manifest.4ba1baafcf3ffaf8845bfbff3f3638ff.js",
+    "precache-manifest.8110605efbd1c14a83524b86554844d1.js": "/Portfolio-hemsida/precache-manifest.8110605efbd1c14a83524b86554844d1.js",
     "service-worker.js": "/Portfolio-hemsida/service-worker.js",
     "static/css/153.11829350.chunk.css.map": "/Portfolio-hemsida/static/css/153.11829350.chunk.css.map",
     "static/css/main.746c043a.chunk.css.map": "/Portfolio-hemsida/static/css/main.746c043a.chunk.css.map",
-    "static/js/153.62e3dda5.chunk.js.LICENSE.txt": "/Portfolio-hemsida/static/js/153.62e3dda5.chunk.js.LICENSE.txt"
+    "static/js/153.62a06f89.chunk.js.LICENSE.txt": "/Portfolio-hemsida/static/js/153.62a06f89.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.770ccd66.js",
     "static/css/153.11829350.chunk.css",
-    "static/js/153.62e3dda5.chunk.js",
+    "static/js/153.62a06f89.chunk.js",
     "static/css/main.746c043a.chunk.css",
-    "static/js/main.084db035.chunk.js"
+    "static/js/main.dc422011.chunk.js"
   ]
 }
