@@ -1,2 +1,0 @@
-(this.webpackJsonpvsprojects=this.webpackJsonpvsprojects||[]).push([[8],{181:function(t,e,s){"use strict";function a(t){t.languages.arff={comment:/%.*/,string:{pattern:/(["'])(?:\\.|(?!\1)[^\\\r\n])*\1/,greedy:!0},keyword:/@(?:attribute|data|end|relation)\b/i,number:/\b\d+(?:\.\d+)?\b/,punctuation:/[{},]/}}t.exports=a,a.displayName="arff",a.aliases=[]}}]);
-//# sourceMappingURL=react-syntax-highlighter_languages_refractor_arff.f040d101.chunk.js.map
