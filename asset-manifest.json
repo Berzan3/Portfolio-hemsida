@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Portfolio-hemsida/static/css/main.1452a94f.chunk.css",
-    "main.js": "/Portfolio-hemsida/static/js/main.c1f8ce7d.chunk.js",
-    "main.js.map": "/Portfolio-hemsida/static/js/main.c1f8ce7d.chunk.js.map",
+    "main.css": "/Portfolio-hemsida/static/css/main.d44b6b84.chunk.css",
+    "main.js": "/Portfolio-hemsida/static/js/main.1b1280c6.chunk.js",
+    "main.js.map": "/Portfolio-hemsida/static/js/main.1b1280c6.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.js": "/Portfolio-hemsida/static/js/react-syntax-highlighter_languages_refractor_abap.1e199707.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js.map": "/Portfolio-hemsida/static/js/react-syntax-highlighter_languages_refractor_abap.1e199707.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_actionscript.js": "/Portfolio-hemsida/static/js/react-syntax-highlighter_languages_refractor_actionscript.3f16759e.chunk.js",
@@ -313,10 +313,10 @@
     "static/js/154.79706e4c.chunk.js": "/Portfolio-hemsida/static/js/154.79706e4c.chunk.js",
     "static/js/154.79706e4c.chunk.js.map": "/Portfolio-hemsida/static/js/154.79706e4c.chunk.js.map",
     "index.html": "/Portfolio-hemsida/index.html",
-    "precache-manifest.5a2ccfeee3c9875f0c838f7dfe11cbbe.js": "/Portfolio-hemsida/precache-manifest.5a2ccfeee3c9875f0c838f7dfe11cbbe.js",
+    "precache-manifest.d8204edef017e101decb12e08753062b.js": "/Portfolio-hemsida/precache-manifest.d8204edef017e101decb12e08753062b.js",
     "service-worker.js": "/Portfolio-hemsida/service-worker.js",
     "static/css/153.11829350.chunk.css.map": "/Portfolio-hemsida/static/css/153.11829350.chunk.css.map",
-    "static/css/main.1452a94f.chunk.css.map": "/Portfolio-hemsida/static/css/main.1452a94f.chunk.css.map",
+    "static/css/main.d44b6b84.chunk.css.map": "/Portfolio-hemsida/static/css/main.d44b6b84.chunk.css.map",
     "static/js/153.d6f87bbb.chunk.js.LICENSE.txt": "/Portfolio-hemsida/static/js/153.d6f87bbb.chunk.js.LICENSE.txt",
     "static/media/AndreasBerzelius.png": "/Portfolio-hemsida/static/media/AndreasBerzelius.1cd0552f.png",
     "static/media/Assetlist.png": "/Portfolio-hemsida/static/media/Assetlist.9745b5d6.png",
@@ -324,8 +324,8 @@
     "static/media/MaterialEditorn_M_2.PNG": "/Portfolio-hemsida/static/media/MaterialEditorn_M_2.1e2ba958.PNG",
     "static/media/Moodboard.png": "/Portfolio-hemsida/static/media/Moodboard.1dc16c10.png",
     "static/media/Pixelsurgeon_DemoVideo.mp4": "/Portfolio-hemsida/static/media/Pixelsurgeon_DemoVideo.2c836c86.mp4",
-    "static/media/Resumé-picture.png": "/Portfolio-hemsida/static/media/Resumé-picture.a6ad8a1c.png",
-    "static/media/Resumé.pdf": "/Portfolio-hemsida/static/media/Resumé.6600c512.pdf",
+    "static/media/Resumé-picture.png": "/Portfolio-hemsida/static/media/Resumé-picture.3e885ed9.png",
+    "static/media/Resumé.pdf": "/Portfolio-hemsida/static/media/Resumé.5845d27a.pdf",
     "static/media/Signalparadox-stats.png": "/Portfolio-hemsida/static/media/Signalparadox-stats.bb1ef704.png",
     "static/media/Signalparadox.gif": "/Portfolio-hemsida/static/media/Signalparadox.69b378d0.gif",
     "static/media/Signalparadox_demo.mp4": "/Portfolio-hemsida/static/media/Signalparadox_demo.fe6e2e10.mp4",
@@ -362,7 +362,7 @@
     "static/js/runtime-main.9151adf9.js",
     "static/css/153.11829350.chunk.css",
     "static/js/153.d6f87bbb.chunk.js",
-    "static/css/main.1452a94f.chunk.css",
-    "static/js/main.c1f8ce7d.chunk.js"
+    "static/css/main.d44b6b84.chunk.css",
+    "static/js/main.1b1280c6.chunk.js"
   ]
 }

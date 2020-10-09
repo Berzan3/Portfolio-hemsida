@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8b6f7476107955b9b22ee5e07c636bd6",
+    "revision": "ffdbd4617b48fc340ed26ad36b18d488",
     "url": "/Portfolio-hemsida/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portfolio-hemsida/static/css/153.11829350.chunk.css"
   },
   {
-    "revision": "604a6846d91b7a260446",
-    "url": "/Portfolio-hemsida/static/css/main.1452a94f.chunk.css"
+    "revision": "cb9443b05e1299dc7314",
+    "url": "/Portfolio-hemsida/static/css/main.d44b6b84.chunk.css"
   },
   {
     "revision": "e86be7bd8cccc0ad0bac",
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portfolio-hemsida/static/js/154.79706e4c.chunk.js"
   },
   {
-    "revision": "604a6846d91b7a260446",
-    "url": "/Portfolio-hemsida/static/js/main.c1f8ce7d.chunk.js"
+    "revision": "cb9443b05e1299dc7314",
+    "url": "/Portfolio-hemsida/static/js/main.1b1280c6.chunk.js"
   },
   {
     "revision": "9a0337c3943852d8759d",
@@ -660,12 +660,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portfolio-hemsida/static/media/Pixelsurgeon_DemoVideo.2c836c86.mp4"
   },
   {
-    "revision": "a6ad8a1c5140feec67fe32c00900407f",
-    "url": "/Portfolio-hemsida/static/media/Resumé-picture.a6ad8a1c.png"
+    "revision": "3e885ed94abfadd2ae50a762d6c6f9f2",
+    "url": "/Portfolio-hemsida/static/media/Resumé-picture.3e885ed9.png"
   },
   {
-    "revision": "6600c51279f00440a4754232f5bec2e7",
-    "url": "/Portfolio-hemsida/static/media/Resumé.6600c512.pdf"
+    "revision": "5845d27ac0e31bfe0626b16d80144508",
+    "url": "/Portfolio-hemsida/static/media/Resumé.5845d27a.pdf"
   },
   {
     "revision": "bb1ef70453718c82cd3cae91b8c2cd17",
