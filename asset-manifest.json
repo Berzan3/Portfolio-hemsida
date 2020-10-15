@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Portfolio-hemsida/static/css/main.626a8112.chunk.css",
-    "main.js": "/Portfolio-hemsida/static/js/main.bbd103c2.chunk.js",
-    "main.js.map": "/Portfolio-hemsida/static/js/main.bbd103c2.chunk.js.map",
+    "main.css": "/Portfolio-hemsida/static/css/main.2f13e07c.chunk.css",
+    "main.js": "/Portfolio-hemsida/static/js/main.704ccde7.chunk.js",
+    "main.js.map": "/Portfolio-hemsida/static/js/main.704ccde7.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.js": "/Portfolio-hemsida/static/js/react-syntax-highlighter_languages_refractor_abap.1e199707.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js.map": "/Portfolio-hemsida/static/js/react-syntax-highlighter_languages_refractor_abap.1e199707.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_actionscript.js": "/Portfolio-hemsida/static/js/react-syntax-highlighter_languages_refractor_actionscript.3f16759e.chunk.js",
@@ -313,10 +313,10 @@
     "static/js/154.d47f20ea.chunk.js": "/Portfolio-hemsida/static/js/154.d47f20ea.chunk.js",
     "static/js/154.d47f20ea.chunk.js.map": "/Portfolio-hemsida/static/js/154.d47f20ea.chunk.js.map",
     "index.html": "/Portfolio-hemsida/index.html",
-    "precache-manifest.7286f2f388c6ef5c494791dd1170eb3e.js": "/Portfolio-hemsida/precache-manifest.7286f2f388c6ef5c494791dd1170eb3e.js",
+    "precache-manifest.0723a1795267742d63b16e8590f8048d.js": "/Portfolio-hemsida/precache-manifest.0723a1795267742d63b16e8590f8048d.js",
     "service-worker.js": "/Portfolio-hemsida/service-worker.js",
     "static/css/153.11829350.chunk.css.map": "/Portfolio-hemsida/static/css/153.11829350.chunk.css.map",
-    "static/css/main.626a8112.chunk.css.map": "/Portfolio-hemsida/static/css/main.626a8112.chunk.css.map",
+    "static/css/main.2f13e07c.chunk.css.map": "/Portfolio-hemsida/static/css/main.2f13e07c.chunk.css.map",
     "static/js/153.665ca613.chunk.js.LICENSE.txt": "/Portfolio-hemsida/static/js/153.665ca613.chunk.js.LICENSE.txt",
     "static/media/AndreasBerzelius.png": "/Portfolio-hemsida/static/media/AndreasBerzelius.1cd0552f.png",
     "static/media/Assetlist.png": "/Portfolio-hemsida/static/media/Assetlist.9745b5d6.png",
@@ -362,7 +362,7 @@
     "static/js/runtime-main.05282ea6.js",
     "static/css/153.11829350.chunk.css",
     "static/js/153.665ca613.chunk.js",
-    "static/css/main.626a8112.chunk.css",
-    "static/js/main.bbd103c2.chunk.js"
+    "static/css/main.2f13e07c.chunk.css",
+    "static/js/main.704ccde7.chunk.js"
   ]
 }

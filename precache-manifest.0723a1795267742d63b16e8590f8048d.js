@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "46a28d0bbb5c1e5c5eb00f0e98d5af9c",
+    "revision": "48ea008213e4d088568c017f5af60e1c",
     "url": "/Portfolio-hemsida/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portfolio-hemsida/static/css/153.11829350.chunk.css"
   },
   {
-    "revision": "d011b22fabda4eb7cc05",
-    "url": "/Portfolio-hemsida/static/css/main.626a8112.chunk.css"
+    "revision": "cb22c79771d1591ab600",
+    "url": "/Portfolio-hemsida/static/css/main.2f13e07c.chunk.css"
   },
   {
     "revision": "3da7284e722b63acb3f5",
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portfolio-hemsida/static/js/154.d47f20ea.chunk.js"
   },
   {
-    "revision": "d011b22fabda4eb7cc05",
-    "url": "/Portfolio-hemsida/static/js/main.bbd103c2.chunk.js"
+    "revision": "cb22c79771d1591ab600",
+    "url": "/Portfolio-hemsida/static/js/main.704ccde7.chunk.js"
   },
   {
     "revision": "9a0337c3943852d8759d",
