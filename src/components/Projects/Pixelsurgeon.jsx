@@ -14,66 +14,65 @@ const codeBlockStyle = {
 
 function Pixelsurgeon() {
     return (
-        <div className="Project">
-            <title>EnviromentUnreal</title>
+        <div className="container">
+            {/* <link rel="stylesheet" type="text/css" href="../scripts/TemplateData/style.css"></link> */}
+            <div className="Project">
+                <title>EnviromentUnreal</title>
 
                 <ReactPlayer
-                className='react-player'
-                url={'../vid/Pixelsurgeon_DemoVideo.mp4'}
-                fluid="md"
-                controls={true}
-                light='true'/>
+                    className='react-player'
+                    url={require('../../vid/Pixelsurgeon_DemoVideo.mp4')}
+                    fluid="md"
+                    controls={true}
+                />
 
                 <div>
-                <h1>What is this?</h1>
-                Pixel surgeon is a learning game about the body's anatomy sitting in a 2d operating room.
+                    <h1>What is this?</h1>
+                <p>Pixel surgeon is a learning game about the body's anatomy sitting in a 2d operating room.
                 Inspired by games like Surgeon Simulator and the board game Operation.
-                The game is intended for a broad target group as there is some blood in the game about 8 years and up.
-                The game is that the player is a surgeon who must perform different transplants of different body parts.
+                The player is a surgeon who must perform different transplants of different body parts.
                 The level of difficulty in the game is stepped up in the form of the player having to replace more and more organs (maximum 3).
                 When the player cuts off organs or limbs, the patient starts bleeding differently depending on which part of the body is lost,
                 as you can see on a blood Monitor in the lower right corner of the screen and how much blood may be lost until the patient dies.
-                The player uses the saw to cut off limbs, the chapel to cut loss organs and open up the torso and needle to sew everything back.
+                The player uses the saw to cut off limbs, the scalpel to cut loss organs and open up the torso and needle to sew everything back.
                 When the player has cut loss the bad body part and replaced it with a healthy body part and then sewed everything together without the patient losing too much blood,
-                the player has passed surgery and presenters then with a rating on its effort. If the player fails,
-                he also gets a rating. The grading system goes from F to A and depends on how much blood the patient has lost and how correct the placement of the healthy body part is.
+                the player has passed the surgery and is presented with a rating on their efforts. If the player fails,
+                they ofcourse also gets a rating (F). The grading system goes from F to A and depends on how much blood the patient has lost and how correct the placement of the healthy body part is.
                 In addition to teaching about the body's anatomy,
-                we list a couple of fun facts about each of the body parts that you can read if you press "Organ info" up to the left and click or have clicked on a body part.
+                we list a couple of fun facts about each of the body parts that you can read if you press "Organ info" up to the left and click or have clicked on a body part.</p>
 
-                <br/>
-                <img src="../img/Pixelsurgeon/pixelsurgeon-stats.png" alt="pixelsurgeon-stats-img" />
+                <br />
+                    <img src={require("../../img/Pixelsurgeon/pixelsurgeon-stats.png")} alt="pixelsurgeon-stats-img" />
 
-                <h1>My tasks</h1>
-                My role I worked on was mainly to create the controls for the game and handle input but I also made a script to handle when the patient should start or
-                stop bleeding on those different blood positions on the body that chose the arms,
-                legs and torso.
-                Then I also modified the blood-particle effect that bleeds on the different blood positions and
-                made a short animation and sound effect for when the player gets his rating.
+                    <h1>My tasks</h1>
+                <p>My role was mainly to create the controls for the game and handle input but i also made a script to handle when the patient should start or
+                stop bleeding on the different blood positions on the body.
+                I also made the blood-particle effect that bleeds on the different blood positions and
+                made a short animation and sound effect for when the player gets their rating.</p>
 
                 <h4>controls</h4>
-                Controls are based on the new input system and are then the script that handles the player's input and is the controller for the player.
-                The actions the player can do in the game are then: pick up body parts / tools, rotate tools and sew / cut.
+                <p>The Controls script is the controls for the player and is based on the new input system.
+                The actions the player can do in the game are: pick up body parts/tools, rotate tools and sew/cut.
                 The controls for performing these actions are based entirely on the mouse and include: left-click to click and hold objects,
                 right-click to use the tool you are holding, and scroll wheel to rotate tools 90 degrees at a time.
-                Picking up objects is then done with the help of a RaycastAll which its hit list sorts according to stock order and
-                whether it is a tool or body part to decide what to pick up.
-                It is necessary to remove bugs and annoying moments such as picking up something that is on the bottom even though it is slightly above that object.
-                Using a tool is managed with the help of a switch kit which, depending on which tool was used,
+                Picking up items is done using a RaycastAll whose hit list is sorted by sprite order and whether it is a tool or a body part to decide what to pick up.
+                It´s necessary to remove bugs and annoying moments such as picking up something that is on the bottom even though it is slightly above that object.
+                Using a tool is managed with the help of a switch case. Which depending on which tool was used,
                 sends an event with the body part on which it was used. This is listened to by the Bodypart script,
                 which decides whether the body part should be removed or inserted.
                 Rotate is managed by first checking if you are holding something and if it is a tool.
-                Then you check if the mouse rotates up or down and depending on this rotate +90 degrees or -90 degrees.
+                Then you check if the mouse rotates up or down and depending on this rotate +90 degrees or -90 degrees.</p>
 
                 <Accordion className="accordion" defaultActiveKey="1" >
-                    <Card>
-                        <Accordion.Toggle as={Card.Header} eventKey="0">
-                            Controls.cs
+                        <Card>
+                            <Accordion.Toggle as={Card.Header} eventKey="0">
+                                Controls.cs
     </Accordion.Toggle>
-                        <Accordion.Collapse eventKey="0">
-                            <Card.Body>
-                                <div className="codeblock">
-                                    <CopyBlock
-                                        text={`
+                            <Accordion.Collapse eventKey="0">
+                                <Card.Body>
+                                    <div className="codeblock">
+                                        <CopyBlock
+                                            text={`
                   namespace Player
                   {
                       public class Controls : MonoBehaviour
@@ -237,36 +236,36 @@ function Pixelsurgeon() {
                           }
                       }
                   }`}
-                                        showLineNumbers
-                                        codeBlock
-                                        language="c"
-                                        theme={dracula}
-                                        customStyle={codeBlockStyle}
-                                    />
-                                </div>
-                            </Card.Body>
-                        </Accordion.Collapse>
-                    </Card>
-                </Accordion>
+                                            showLineNumbers
+                                            codeBlock
+                                            language="c"
+                                            theme={dracula}
+                                            customStyle={codeBlockStyle}
+                                        />
+                                    </div>
+                                </Card.Body>
+                            </Accordion.Collapse>
+                        </Card>
+                    </Accordion>
 
-                <h4>BleedSpotManager</h4>
-                Manages whether the patient should start bleeding or stop bleeding at the different blood positions.
+                    <h4>BleedSpotManager</h4>
+                <p>Manages whether the patient should start bleeding or stop bleeding at the different blood positions.
                 This is done first with the help of a dictionary entering the names of the body parts as keys and the blood positions as values.
                 The organs are commonly represented by a blood position "Thorax".
                 Then when a tool is used,
                 a function is started in the script that checks which tool was used and which body part it was used on and depending on this start or
-                stop the bleeding at the different blood positions.
+                stop the bleeding at the different blood positions.</p>
 
                 <Accordion className="accordion" defaultActiveKey="1" >
-                    <Card>
-                        <Accordion.Toggle as={Card.Header} eventKey="0">
-                            BleedSpotManager.cs
+                        <Card>
+                            <Accordion.Toggle as={Card.Header} eventKey="0">
+                                BleedSpotManager.cs
     </Accordion.Toggle>
-                        <Accordion.Collapse eventKey="0">
-                            <Card.Body>
-                                <div className="codeblock">
-                                    <CopyBlock
-                                        text={`
+                            <Accordion.Collapse eventKey="0">
+                                <Card.Body>
+                                    <div className="codeblock">
+                                        <CopyBlock
+                                            text={`
                   public class BleedSpotManager : MonoBehaviour
                   {
                       Dictionary<string, ParticleSystem> _bleedSpots;
@@ -332,38 +331,40 @@ function Pixelsurgeon() {
                       }
                   
                   }`}
-                                        showLineNumbers
-                                        codeBlock
-                                        language="c"
-                                        theme={dracula}
-                                        customStyle={codeBlockStyle}
-                                    />
-                                </div>
-                            </Card.Body>
-                        </Accordion.Collapse>
-                    </Card>
-                </Accordion>
+                                            showLineNumbers
+                                            codeBlock
+                                            language="c"
+                                            theme={dracula}
+                                            customStyle={codeBlockStyle}
+                                        />
+                                    </div>
+                                </Card.Body>
+                            </Accordion.Collapse>
+                        </Card>
+                    </Accordion>
 
-                <h4>Miscellaneous</h4>
-                I made an animation that visualizes that the grade slides and fades into the screen.
-                Then I also made a slightly comical almost fart-like sound that is played in connection with the animation.
+                    <h4>Miscellaneous</h4>
+                <p>I made an animation that visualizes that the grade slides and fades into the screen.
+                Then i also made a slightly comical almost fart-like sound that is played in connection with the animation.</p>
 
                 <h1>The process</h1>
-                This was a small but fun 2d project to make! The goal of the project was to make a learning game.
+                <p>This was a small but fun 2d project to make! The goal of the project was to make a learning game for the web.</p>
 
                 <h1>Challenges</h1>
-                 The biggest challenge for me was to make the Controls work as intended.
+                 <p>The biggest challenge for me was to make the Controls work as intended.</p>
 
                 <h1>Iteration</h1>
-                We were sure that we wanted to teach about the anatomy of the body from the beginning,
+                <p>We were sure that we wanted to teach about the anatomy of the body from the beginning,
                 but if we were to teach basic information about the different parts of the body,
                 we changed it to short fun facts, as we judged that it would be very boring to just sit and read paragraphs of facts.
                 Other things we changed about were the number of tools and whether the player could do brain transplants.
                 We considered brain transplants to be too unrealistic as we still try to relate to some form of semi-realism in the game.
                 The second was that we were content with only three tools because if we had added more, we think it would have been too cumbersome to keep track of.
                 Certain things got reworked under the project but i am pleased about how it turned out and the work me and my colleagues put into the project.
-                In the end i learned more about working on 2D projects in Unity.
-                </div>    
+                In the end i learned more about working on 2D projects in Unity.</p>
+                </div>
+
+            </div>
         </div>
     );
 }

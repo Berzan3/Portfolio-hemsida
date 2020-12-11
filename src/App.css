@@ -1,17 +1,119 @@
+ 
+/* @import url(https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css); */
 
-*{
-  color:white;
-  box-sizing: border-box;
-  margin: auto;
+:root {
+  --BackgroundHue: 0;
+  --BackgroundSaturation: 0%;
+  --BackgroundLightness: 5%;
+}
+
+body {
+  color: hsla(0, 0%, 100%, 0.9);
   font-family: "Fira Code", monospace;
   text-decoration: none;
   line-height: 1.4;
-  background-color: rgb(0, 0, 0);
+  background-color: hsl(var(--BackgroundHue),var(--BackgroundSaturation),var(--BackgroundLightness));
   padding: 0;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1280px) {
+   .navBar {
+    display: grid !important;
+  }
+  .Home p {
+    font-size: 20px;
+  }
+  .Project, .Project .react-player, .Project img {
+    max-width: 90% !important;
+  }
+  .Project img {
+    height: 300px !important;
+  }
+  .Project h1  {
+    font-size: 24px;
+  }
+  .Project h2 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .Home p {
+    font-size: 18px;
+  }
+  .ProjectsPreviewContainer {
+    display: block !important;
+  }
+  .Project, .Project .react-player, .Project img  {
+    max-width: 80% !important;
+  }
+  .Project img {
+    height: 250px !important;
+  }
+  .Project h1  {
+    font-size: 20px;
+  }
+  .Project h2 {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .Home p, .Project {
+    font-size: 14px !important;
+  }
+  .Project, .Project .react-player, .Project img  {
+    max-width: 60% !important;
+  }
+  .Project img {
+    height: 200px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Home p {
+    font-size: 12px;
+    min-width: 70%;
+  }
+  .ProjectPreview p {
+    font-size: 17px !important;
+  }
+  .ProjectPreview h3 {
+    font-size: 20px !important;
+  }
+  .Project .ProjectPreview p {
+    font-size: 14px !important;
+  }
+  .Project, .Project .react-player, .Project img  {
+    max-width: 50% !important;
+  }
+  .Project p, .Project h1, .Project h2, .Project h3, .Project h4 {
+    max-width: 60%;
+    margin: auto;
+  }
+  .Project #centerize {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Project p, .Project h1, .Project h2, .Project h3, .Project h4 {
+    max-width: 50%;
+    margin: auto;
+  }
+}
+
+#root.Home {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 1.5),rgba(0, 0, 0, 0.3)), url('./img/Spaceinvader_c++.gif') !important;
+  background-size: cover;
+  margin: 0!important;
 }
 
 /*Header css start*/
-header h1 {
+header h1, #andmoretocome {
   text-align: center;
   font-style: italic;
 }
@@ -46,11 +148,16 @@ header h1 {
 .Home img {
   border-radius: 1.25rem;
   margin-right: 1%;
+  max-height: 200px;
+  min-height: 200px;
+  max-width: 150px;
+  min-width: 150px;
 }
 
 .Home {
  display: flex;
  flex-wrap: wrap;
+ justify-content: center;
  margin-top: 100px;
  font-size: 24px;
 }
@@ -58,31 +165,42 @@ header h1 {
 .Home p {
   max-width: 50%;
   text-size-adjust: 100%;
-  margin-left: 0%;
 }
 
-.CV img {
-  display: flex;
-  align-items: center;
-  margin-top: 50px;
-}
 /*home css end*/
 
 
+/*Cv css start */
+.CV {
+  display: flex;
+  justify-content: center;
+}
+
+.CV img {
+  margin-top: 50px;
+}
+/*Cv css end */
+
+
 /*Projectspreview.jsx css start--->*/
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+
 .ProjectsPreviewContainer {
   display: grid;
-  grid-template-columns: 35% 35%;
+  grid-template-columns: 50% 50%;
   row-gap: 15px;
   column-gap: 20px;
   justify-content: center;
   margin-top: 50px;
-  max-width: 65%;
+  max-width: 100%;
 }
 
 .ProjectPreview {
   transition: all 0.3s ease-in-out;
-  margin: 0 auto;
   cursor: pointer;
 }
 
@@ -100,6 +218,11 @@ header h1 {
 .ProjectPreview h3,.ProjectPreview p {
   color: white;
 }
+
+.ProjectPreview p {
+  font-size: 20px;
+  max-width: 80%;
+}
 /*<--Projectpreview.jsx css end*/
 
 
@@ -107,15 +230,14 @@ header h1 {
   display: grid;
   justify-content: center;
   font-size: 18px;
-  max-width: 60%;
 }
 
 .Project h1,.Project h2,.Project h3,.Project h4,.Project h5,.Project h6,.Project body {
-  background-color: black;
+  background-color: hsl(var(--BackgroundHue),var(--BackgroundSaturation),var(--BackgroundLightness));
   color: white;
-  margin: auto;
   font-family:'nixie_oneregular', 'Courier New', Courier, monospace;
   text-size-adjust: 100%;
+  font-size-adjust: inherit;
   margin-top: 20px;
 }
 
@@ -129,23 +251,67 @@ header h1 {
   max-width: 100%;
   height: 350px;
   object-fit: cover;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: auto;
 }
 
-.Project #bigImage {
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 50% !important;
+.Project .react-player {
+  margin: auto;
 }
 
+.Project #centerize {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Project#recentProject {
+  padding-top: 180px;
+}
+
+.Project#recentProject h1 {
+  text-align: center;
+}
+
+.Project#recentProject h1, .Project .ProjectPreview h4  {
+  background-color: transparent;
+}
+
+.ProjectPreview #readMore {
+  color: blue;
+}
+
+.Project .ProjectPreview img {
+  margin: 0;
+  display: block;
+  padding-bottom: 0px;
+}
 /*Accordion css start ->*/
 .card{
-  background-color: black;
+  background-color: hsl(var(--BackgroundHue),var(--BackgroundSaturation),var(--BackgroundLightness));
+  border: transparent;
+  display: block;
 }
 
 .card-header {
+  padding: .75rem 1.25rem;
   background-color: rgb(66, 66, 66);
   color: white;
   cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.card-header:hover {
+  text-decoration: underline;
+  background-color: rgb(88, 88, 88);
+}
+
+.card-body {
+  color: transparent;
+  background-color: transparent;
 }
 /*<- Accordion css end*/
 
@@ -155,4 +321,6 @@ footer{
   padding-top: 50px;
   text-align: center;
   font-size: 9pt;
+  
 }
+

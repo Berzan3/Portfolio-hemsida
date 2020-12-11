@@ -3,6 +3,15 @@ import { Accordion, Card } from 'react-bootstrap';
 import { CopyBlock, dracula } from "react-code-blocks";
 import ReactPlayer from "react-player";
 
+const rootContainerElement = document.getElementById('root');
+
+function removeBanner() {
+  if(rootContainerElement.classList.length > 0) {
+    rootContainerElement.classList.remove('Home');
+  }
+
+}
+
 const codeBlockStyle = {
   height: '500px',
   overflowY: 'scroll',
@@ -10,52 +19,56 @@ const codeBlockStyle = {
   boxShadow: '1px 2px 3px rgba(0,0,0,0.35)',
   fontSize: '1rem',
   margin: '0px 0.75rem',
+  flexWrap: 'wrap',
 }
 
 function Signalparadox() {
   return (
-    <div className="Project">
-      <title>Signalparadox</title>
+    <div className="container" onLoad={removeBanner()}>
+      <div className="Project">
+        <title>Signalparadox</title>
 
-      <ReactPlayer
-        className='react-player'
-        url={'../vid/Signalparadox_demo.mp4'}
-        fluid="md"
-        controls={true}
-        light='true'/>
+        <ReactPlayer
+          className='react-player'
+          url={require('../../vid/Signalparadox_demo.mp4')}
+          fluid="md"
+          playing={true}
+          controls={true}
+        />
 
-      <div>
-      <h1>What is this?</h1>
-      In SignalParadox you play as Livia Skye who wakes up on an alien infested spaceship trying to figure out what's going on and how to get out.
+        <div>
+          <h1>What is this?</h1>
+      <p>In SignalParadox you play as Livia Skye who wakes up on an alien infested spaceship trying to figure out what's going on and how to get out.
       You sneak past aliens and solve puzzles in order to make it out alive.
-      The game concept is basically to stealth and solve puzzles through an exciting and scary environment.
-      <img src="../img/Signalparadox/Signalparadox-stats.png" alt="SignalParadox-stats" />
+      The game concept is basically to stealth and solve puzzles through an exciting and scary environment.</p>
+      <img src={require("../../img/Signalparadox/Signalparadox-stats.png")} alt="SignalParadox-stats" />
 
-        <h1>My Role</h1>
-      Me and my colleagues had several roles in the project because we were so few and we weren't sure of what roles we had under the project.
-      In the end my roles in the project was input programmer,
-      Gameplay designer and Ai programmer.
+          <h1>My Role</h1>
+      <p>Me and my colleagues had several roles in the project because we were so few and we weren't sure of what roles we had under the project.
+      In the end my roles in the project had been input programmer,
+      Gameplay designer and Ai programmer.</p>
       <h1>My tasks</h1>
-      <img src="../img/Signalparadox/grenadethrow.gif" alt="grenadethrow-gif" />
-        <h2>Decoygrenade</h2>
-        The player can pick up and throw a decoygrenade to lure a certain alien to it so that they can more safely walk by under a limited time.
+          <img src={require("../../img/Signalparadox/grenadethrow.gif")} alt="grenadethrow-gif" />
+          <h2>Decoygrenade</h2>
+        <p>The player can pick up and throw a decoygrenade to lure a certain alien to it so that they can more safely walk by under a limited time.
         The trajectory of the grenade is visualized while aiming so the player could aim more easily.
-        If the player aims out of range the visualization and animation stops.
+        If the player aims out of range the visualization and animation stops.</p>
       <br />
-        To make the visualization of the grenades trajectory look better than just a colored thin line i made a simple texture that makes the linerenderer look dotted.
+        <p>To make the visualization of the grenades trajectory look better than just a colored thin line i made a simple texture that makes the linerenderer look dotted.</p>
         <br />
-        <img src="../img/Signalparadox/dottedlineTexture.png" alt="dottedline-texture" />
+          <img src={require("../../img/Signalparadox/dottedlineTexture.png")} alt="dottedline-texture" />
 
-      <Accordion className="accordion" defaultActiveKey="1" >
-        <Card>
-          <Accordion.Toggle as={Card.Header} eventKey="0">
-            ThrowDecoyGrenade.cs
+          <Accordion className="accordion" defaultActiveKey="1" >
+            <Card>
+              <Accordion.Toggle as={Card.Header} eventKey="0">
+                ThrowDecoyGrenade.cs
+                <p>click to see code</p>
     </Accordion.Toggle>
-          <Accordion.Collapse eventKey="0">
-            <Card.Body>
-              <div className="codeblock">
-                <CopyBlock
-                  text={`private void Throw()
+              <Accordion.Collapse eventKey="0">
+                <Card.Body>
+                  <div className="codeblock">
+                    <CopyBlock
+                      text={`private void Throw()
       {
           shouldDrawPath = false;
           currentState = States.HoldingNoGrenade;
@@ -120,50 +133,51 @@ function Signalparadox() {
               shouldDrawPath = false;   
           }
       }`}
-                  showLineNumbers
-                  codeBlock
-                  language="c"
-                  theme={dracula}
-                  customStyle={codeBlockStyle}
-                // highlight="1-5,7,10,15-20"
-                />
-              </div>
-            </Card.Body>
-          </Accordion.Collapse>
-        </Card>
-      </Accordion>
+                      showLineNumbers
+                      codeBlock
+                      language="c"
+                      theme={dracula}
+                      customStyle={codeBlockStyle}
+                    // highlight="1-5,7,10,15-20"
+                    />
+                  </div>
+                </Card.Body>
+              </Accordion.Collapse>
+            </Card>
+          </Accordion>
 
-        After a certain time or if the player picks up another grenade the currently thrown grenade gets erased.
-      <img src="../img/Signalparadox/grenadethrow2.gif" alt="grenadethrow2-gif" />
-        The script for getting the aliens to chase the grenade was made by my co-programmer
+        <p>After a certain time or if the player picks up another grenade the currently thrown grenade gets erased.</p>
+      <img src={require("../../img/Signalparadox/grenadethrow2.gif")} alt="grenadethrow2-gif" />
+        <p>The script for getting the aliens to chase the grenade was made by my co-programmer</p>
 
-      <img src="../img/Signalparadox/chargerCharging.gif" alt="chargerCharging-gif" />
-        <h2>The chargerEnemy</h2>
-        The ChargerEnemy is an enemy that charges at the player at a very fast speed and if the player is caught in the charge the player dies when the charger smashes into something.
+      <img src={require("../../img/Signalparadox/chargerCharging.gif")} alt="chargerCharging-gif" />
+          <h2>The chargerEnemy</h2>
+        <p>The ChargerEnemy is an enemy that charges at the player at a very fast speed and if the player is caught in the charge the player dies when the charger smashes into something.</p>
       <br />
-        The charger has several states it switches between and uses a navmesh agent to move around.
-        The Charger´s states are: Patrolstate, huntstate, chargeupstate, chargestate, stunstate, deadstate.
+        <p>The charger has several states it switches between and uses a navmesh agent to move around.
+        The Charger´s states are: Patrolstate, huntstate, chargeupstate, chargestate, stunstate, deadstate. In
         Patrolstate the charger patrols between his waypoints until he sees the player.
         Hunstate the charger sees the player and is actively chasing the player to go into chargeupstate.
-        Chargeupstate the charger stops briefly charge against the player.
+        Chargeupstate the charger stops briefly before charging against the player.
         ChargeState the charger charges at the player.
         Stunstate happens after the charger has charged into something where he is stunned for a brief moment.
-        Deadstate the charger is dead and can only happen if the charger charges into a glasswall or a laser.
-        <img src="../img/Signalparadox/chargerInspectWin.png" alt="chargerInspectWin-png" />
-      <br />
-        At first i tried to use a boxcollider with ontriggerEnter to know when it has stopped charging
-        but after some time working on the project my co-programmer suggested i could just measure the speed after it has started charging and measure to see if it decreases.
+        Deadstate the charger is dead and can only happen if the charger charges into a glasswall or laser.</p>
+        <img src={require("../../img/Signalparadox/chargerInspectWin.PNG")} alt="chargerInspectWin-png" />
+          <br />
+        <p>At first i tried to use a boxcollider with ontriggerEnter to know when the Charger has stopped charging
+        but after some time working on the project my co-programmer suggested i could just measure the speed after it has started charging and measure to see if it decreases.</p>
 
       <Accordion className="accordion" defaultActiveKey="1" >
-        <Card>
-          <Accordion.Toggle as={Card.Header} eventKey="0">
-            ChargeState.cs
+            <Card>
+              <Accordion.Toggle as={Card.Header} eventKey="0">
+                ChargeState.cs
+                <p>click to see code</p>
     </Accordion.Toggle>
-          <Accordion.Collapse eventKey="0">
-            <Card.Body>
-              <div className="codeblock">
-                <CopyBlock
-                  text={`namespace AI.Charger.AIStateMachine
+              <Accordion.Collapse eventKey="0">
+                <Card.Body>
+                  <div className="codeblock">
+                    <CopyBlock
+                      text={`namespace AI.Charger.AIStateMachine
                   {
                       [CreateAssetMenu(menuName = "AIStates/Charger/ChargeState")]
                       public class ChargeState : ChargerBaseState
@@ -221,33 +235,34 @@ function Signalparadox() {
                       }
                   }
                   `}
-                  showLineNumbers
-                  codeBlock
-                  language="c"
-                  theme={dracula}
-                  customStyle={codeBlockStyle}
-                />
-              </div>
-            </Card.Body>
-          </Accordion.Collapse>
-        </Card>
-      </Accordion>
+                      showLineNumbers
+                      codeBlock
+                      language="c"
+                      theme={dracula}
+                      customStyle={codeBlockStyle}
+                    />
+                  </div>
+                </Card.Body>
+              </Accordion.Collapse>
+            </Card>
+          </Accordion>
 
-        The charger is part of a puzzle the player must solve by dodging and luring the charger to charge into a glass wall.
-        If the charger reaches a certain minimum speed and charges into the glasswall it destroys the wall creating a path and then dies.
+        <p>The charger is part of a puzzle the player must solve by dodging and luring the charger to charge into a glass wall.
+        If the charger reaches a certain minimum speed and charges into the glasswall it destroys the wall creating a path and then dies.</p>
 
-      <img src="../img/Signalparadox/chargerDestroyGlass.gif" alt="chargerDestroyGlass-gif" />
+      <img src={require("../../img/Signalparadox/chargerDestroyGlass.gif")} alt="chargerDestroyGlass-gif" />
 
-      <Accordion className="accordion" defaultActiveKey="1" >
-        <Card>
-          <Accordion.Toggle as={Card.Header} eventKey="0">
-            GlassWallTrigger.cs
+          <Accordion className="accordion" defaultActiveKey="1" >
+            <Card>
+              <Accordion.Toggle as={Card.Header} eventKey="0">
+                GlassWallTrigger.cs
+                <p>click to see code</p>
     </Accordion.Toggle>
-          <Accordion.Collapse eventKey="0">
-            <Card.Body>
-              <div className="codeblock">
-                <CopyBlock
-                  text={`namespace Interactables.Triggers.Events
+              <Accordion.Collapse eventKey="0">
+                <Card.Body>
+                  <div className="codeblock">
+                    <CopyBlock
+                      text={`namespace Interactables.Triggers.Events
                   {
                       public class GlassWallTrigger : MonoBehaviour
                       {
@@ -299,47 +314,48 @@ function Signalparadox() {
                           }
                       }
                   }`}
-                  showLineNumbers
-                  codeBlock
-                  language="c"
-                  theme={dracula}
-                  customStyle={codeBlockStyle}
-                />
-              </div>
-            </Card.Body>
-          </Accordion.Collapse>
-        </Card>
-      </Accordion>
+                      showLineNumbers
+                      codeBlock
+                      language="c"
+                      theme={dracula}
+                      customStyle={codeBlockStyle}
+                    />
+                  </div>
+                </Card.Body>
+              </Accordion.Collapse>
+            </Card>
+          </Accordion>
 
-        <h2>Miscellaneous</h2>
-        To make the grenade pickup more realistic and look better i wanted the grenade in the players hand to appear when the animation of the pickup reached out and grabbed.
-        So my first thought was to make a timer in the script to decide when to enable the grenade but then i realised i could make it much easier with an animation event.
-      <img src="../img/Signalparadox/grenadePickupAnimation.gif" alt="grenadepickupAnimation-gif" />
-        To make the transition between levels feel more smooth i made a simple fade in with an elevator sound which triggers at the end of a level,
-        when the elevator sound has finished the player is taken to the next level.
-      <img src="../img/Signalparadox/fadeinLevelTransition.gif" alt="fadeinleveltransition-gif" />
-        My programming colleague advised me to make a simple Hinge joint motor instead of an animation to make this cool machine one of my designers made spin.
-      <img src="../img/Signalparadox/motorSpin.gif" alt="motorSpin-gif" />
+          <h2>Miscellaneous</h2>
+        <p>To make the grenade pickup more realistic and look better i wanted the grenade in the players hand to appear when the animation of the pickup reached out and grabbed.
+        So my first thought was to make a timer in the script to decide when to enable the grenade but then i realised i could make it much easier with an animation event.</p>
+      <img src={require("../../img/Signalparadox/grenadePickupAnimation.gif")} alt="grenadepickupAnimation-gif" />
+        <p>To make the transition between levels feel more smooth i made a simple fade in with an elevator sound which triggers at the end of a level,
+        when the elevator sound has finished the player is taken to the next level.</p>
+      <img src={require("../../img/Signalparadox/fadeinLevelTransition.gif")} alt="fadeinleveltransition-gif" />
+        <p>My programming colleague advised me to make a simple Hinge joint motor instead of an animation to make this cool machine one of my designers made spin.</p>
+      <img src={require("../../img/Signalparadox/motorSpin.gif")} alt="motorSpin-gif" />
 
-        <h1>The process</h1>
-       This was my biggest game project i've helped make at university so far.
-       I was really exhausted in the beginning of the project because of a previously very intense programming course and that in the beginning of this course we had to make a 2d and 3d controller.
-       The objective with the project was to make a 3D game.
+          <h1>The process</h1>
+       <p>This was my biggest game project i've helped make at university so far.
+       I was really exhausted in the beginning of the project because of a previously very intense programming course and in the beginning of this course we had to make a 2d and 3d controller.
+       The objective with the project was to make a 3D game.</p>
        <h1>Challenges</h1>
-       This was a big challenge, i had never made a project of this size before with so many people. My Unity and C# knowledge was also a bit novice.
+       <p>This was a big challenge, i had never made a project of this size before with so many people. My Unity and C# knowledge was also a bit novice.
         Another challenge was that our group wanted the grenade trajectory to be visualized like a parabola of some sort.
         I was in charge of the grenade and i had never made something so complex with a linerenderer before.
-        I looked up articles and videos on the internet to understand the math for calculating the curve. After i got down the math, the rest went easier.
+        I looked up articles and videos on the internet to understand the math for calculating the curve. After i got down the math, the rest went easier.</p>
         <h1>Iteration</h1>
-        The ChargerEnemy had to have it´s Charge Mechanism reworked several times throughout the project until it was bug free and felt good.
+        <p>The ChargerEnemy had to have it´s Charge Mechanism reworked several times throughout the project until it was bug free and felt good.
         As my first big Game project, with only a limited amount of Unity and programming knowledge,
         i definitely struggled with my tasks. But this is what my colleagues expected me to make,
         so i worked a lot to make sure it worked in the end.
         I'm also very thankful for my more experienced co-programmer who i could always ask questions or get help from if i needed it.
 
         Looking back through my weekly reviews of my work and how my code improved through the project,
-        I'm proud of how i fought to make sure it worked because i learned a lot in the process.
+        I'm proud of how i fought to make sure it worked because i learned a lot in the process.</p>
         </div>
+      </div>
     </div>
   );
 }

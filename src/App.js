@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; //fuckar min egna css
 import './App.css';
-import { BrowserRouter, Route } from 'react-router-dom'
+import { HashRouter, Route } from 'react-router-dom'
 import MenuItem from './components/MenuItem';
 import Home from './components/Home';
 import Cv from './components/Cv';
@@ -13,10 +13,10 @@ import Pixelsurgeon from './components/Projects/Pixelsurgeon';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
+    <HashRouter>
+      <div className="App" >
         <header>
-          <h1>Andreas Berzelius</h1>
+          <h1>Andreas Berzelius</h1 >
         </header>
         <MenuItem />
         <Route exact path="/" component={Home} />
@@ -27,11 +27,11 @@ function App() {
         <Route path="/Spaceinvader" component={Spaceinvader} />
         <Route path="/Pixelsurgeon" component={Pixelsurgeon} />
 
-        <footer>©2020 Andreas Berzelius. All Rights Reserved.
-          Email: Andreas.Berzelius@outlook.com
+        <footer>©2020 Andreas Berzelius. all rights reserved.&nbsp;
+          <a href="mailto:Andreas.Berzelius@outlook.com">Andreas.Berzelius@outlook.com</a>
         </footer>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
