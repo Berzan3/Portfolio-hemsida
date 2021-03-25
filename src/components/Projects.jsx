@@ -55,6 +55,14 @@ function Projects() {
         </div>
       </NavLink>
 
+      <NavLink to="./TheQuillSisters">
+        <div className="ProjectPreview"><img src={require("../img/TheQuillSisters.gif")} alt="The Quill Sisters-gif" />
+          <h3 >The Quill Sisters - Ongoing Course Project</h3>
+          <p>A third person hack n slash in a egyptian setting</p>
+          <p id="readMore">Click to read more</p>
+        </div>
+      </NavLink>
+
       <div className="ProjectPreview" id="andmoretocome">
       <h2>And more to come!</h2>
       </div>

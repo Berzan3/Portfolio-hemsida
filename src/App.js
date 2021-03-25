@@ -10,6 +10,7 @@ import Signalparadox from './components/Projects/Signalparadox';
 import EnviromentUnreal from './components/Projects/EnviromentUnreal';
 import Spaceinvader from './components/Projects/Spaceinvader';
 import Pixelsurgeon from './components/Projects/Pixelsurgeon';
+import TheQuillSisters from './components/Projects/TheQuillSisters';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/EnviromentUnreal" component={EnviromentUnreal} />
         <Route path="/Spaceinvader" component={Spaceinvader} />
         <Route path="/Pixelsurgeon" component={Pixelsurgeon} />
+        <Route path="/TheQuillSisters" component={TheQuillSisters} />
 
         <footer>©2020 Andreas Berzelius. all rights reserved.&nbsp;
           <a href="mailto:Andreas.Berzelius@outlook.com">Andreas.Berzelius@outlook.com</a>
